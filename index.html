@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Oak & Stitch | Leather Goods</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Prata&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="page-bg"></div>
+    <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#">Oak & Stitch</a>
+      <nav class="top-nav" id="topNav">
+        <a href="#products">Products</a>
+        <a href="#craft">Craft</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+      <div class="header-actions">
+        <button class="ghost-btn" id="menuBtn" aria-label="Open Menu">Menu</button>
+        <button class="solid-btn" id="cartBtn" aria-label="Open Cart">
+          Cart <span id="cartCount">0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero reveal">
+        <p class="eyebrow">100% Authentic Leather</p>
+        <h1>Built for years. Styled for today.</h1>
+        <p class="hero-copy">
+          Premium leather essentials handcrafted with top-notch quality, honest sourcing,
+          and timeless design.
+        </p>
+        <div class="hero-ctas">
+          <a href="#products" class="solid-btn">Shop Collection</a>
+          <a href="#craft" class="ghost-btn">How We Craft</a>
+        </div>
+        <div class="hero-badges">
+          <span>Full-grain leather</span>
+          <span>Hand-finished edges</span>
+          <span>Lifetime stitching guarantee</span>
+        </div>
+        <div class="hero-image">
+          <img
+            src="https://images.pexels.com/photos/6044266/pexels-photo-6044266.jpeg?auto=compress&cs=tinysrgb&w=1600"
+            alt="Handmade leather goods on a workbench"
+          />
+        </div>
+        <div class="hero-metrics">
+          <article class="metric-card">
+            <strong class="metric-value" data-target="1800" data-suffix="+">0</strong>
+            <span>Orders Delivered</span>
+          </article>
+          <article class="metric-card">
+            <strong class="metric-value" data-target="99" data-suffix="%">0</strong>
+            <span>Repeat Customers</span>
+          </article>
+          <article class="metric-card">
+            <strong class="metric-value" data-target="15" data-suffix="+">0</strong>
+            <span>Years Craft Heritage</span>
+          </article>
+        </div>
+      </section>
+
+      <section class="products reveal" id="products">
+        <div class="section-heading">
+          <p class="eyebrow">Featured Goods</p>
+          <h2>Leather that gets better with age</h2>
+        </div>
+        <div class="product-controls" id="productControls">
+          <button class="filter-chip active" type="button" data-filter="all">All Pieces</button>
+          <button class="filter-chip" type="button" data-filter="everyday">Everyday</button>
+          <button class="filter-chip" type="button" data-filter="travel">Travel</button>
+          <button class="filter-chip" type="button" data-filter="accessories">Accessories</button>
+        </div>
+
+        <div class="product-layout">
+          <div class="product-grid" id="productGrid">
+            <article
+              class="card reveal product-card"
+              data-category="everyday"
+              data-name="Heritage Wallet"
+              data-price="6499"
+              data-price-label="₹6,499"
+              data-material="Vegetable-tanned full-grain leather"
+              data-image="https://images.pexels.com/photos/2081199/pexels-photo-2081199.jpeg?auto=compress&cs=tinysrgb&w=1200"
+              data-story="A compact, hand-finished wallet made for daily carry with refined edge burnishing."
+            >
+            <div class="card-media">
+              <img
+                src="https://images.pexels.com/photos/2081199/pexels-photo-2081199.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Brown leather wallet"
+                loading="lazy"
+              />
+            </div>
+            <h3>Heritage Wallet</h3>
+            <p>Compact bifold in vegetable-tanned full-grain leather.</p>
+            <div class="card-row">
+              <strong>₹6,499</strong>
+              <div class="card-actions">
+                <button class="view-btn" type="button">Preview</button>
+                <button class="add-btn" data-product="Heritage Wallet" data-price="₹6,499">
+                  Add
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="card reveal product-card"
+            data-category="travel"
+            data-name="Rider Duffel"
+            data-price="19999"
+            data-price-label="₹19,999"
+            data-material="Full-grain leather with brass hardware"
+            data-image="https://images.pexels.com/photos/1058958/pexels-photo-1058958.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            data-story="A rugged duffel engineered for weekend travel, designed to gain character over time."
+          >
+            <div class="card-media">
+              <img
+                src="https://images.pexels.com/photos/1058958/pexels-photo-1058958.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Tan leather duffel bag"
+                loading="lazy"
+              />
+            </div>
+            <h3>Rider Duffel</h3>
+            <p>Travel-ready duffel with brass hardware and cotton lining.</p>
+            <div class="card-row">
+              <strong>₹19,999</strong>
+              <div class="card-actions">
+                <button class="view-btn" type="button">Preview</button>
+                <button class="add-btn" data-product="Rider Duffel" data-price="₹19,999">
+                  Add
+                </button>
+              </div>
+            </div>
+          </article>
+          <article
+            class="card reveal product-card"
+            data-category="accessories"
+            data-name="Foundry Belt"
+            data-price="4899"
+            data-price-label="₹4,899"
+            data-material="Solid leather hide with burnished buckle"
+            data-image="https://images.pexels.com/photos/7621139/pexels-photo-7621139.jpeg?auto=compress&cs=tinysrgb&w=1200"
+            data-story="A strong everyday belt with clean finishing and a long-life construction profile."
+          >
+            <div class="card-media">
+              <img
+                src="https://images.pexels.com/photos/7621139/pexels-photo-7621139.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Leather belt with metal buckle"
+                loading="lazy"
+              />
+            </div>
+            <h3>Foundry Belt</h3>
+            <p>Solid hide belt with burnished buckle and edge finishing.</p>
+            <div class="card-row">
+              <strong>₹4,899</strong>
+              <div class="card-actions">
+                <button class="view-btn" type="button">Preview</button>
+                <button class="add-btn" data-product="Foundry Belt" data-price="₹4,899">
+                  Add
+                </button>
+              </div>
+            </div>
+          </article>
+          </div>
+
+          <aside class="spotlight-card reveal" id="spotlightCard">
+            <p class="eyebrow">Live Spotlight</p>
+            <div class="spotlight-image-wrap">
+              <img
+                id="spotlightImage"
+                src="https://images.pexels.com/photos/2081199/pexels-photo-2081199.jpeg?auto=compress&cs=tinysrgb&w=1200"
+                alt="Selected leather product"
+              />
+            </div>
+            <h3 id="spotlightName">Heritage Wallet</h3>
+            <p class="spotlight-copy" id="spotlightDesc">
+              A compact, hand-finished wallet made for daily carry with refined edge burnishing.
+            </p>
+            <ul class="spotlight-meta">
+              <li>
+                <span>Material</span>
+                <strong id="spotlightMaterial">Vegetable-tanned full-grain leather</strong>
+              </li>
+              <li>
+                <span>Price</span>
+                <strong id="spotlightPrice">₹6,499</strong>
+              </li>
+            </ul>
+            <button
+              class="solid-btn spotlight-add"
+              id="spotlightAddBtn"
+              type="button"
+              data-product="Heritage Wallet"
+              data-price="₹6,499"
+            >
+              Add This Item
+            </button>
+          </aside>
+        </div>
+      </section>
+
+      <section class="craft reveal" id="craft">
+        <div class="craft-content">
+          <p class="eyebrow">Craft Process</p>
+          <h2>From hide selection to final stitch</h2>
+          <p>
+            We source certified authentic leather, inspect each cut by hand, and finish
+            every seam with durability-focused techniques. Every piece ships with care
+            instructions and an authenticity card.
+          </p>
+          <div class="craft-image">
+            <img
+              src="https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg?auto=compress&cs=tinysrgb&w=1600"
+              alt="Leather artisan stitching by hand"
+              loading="lazy"
+            />
+          </div>
+        </div>
+        <ul class="craft-list">
+          <li>
+            <h4>01. Selection</h4>
+            <p>Only top-grade hides with natural grain character.</p>
+          </li>
+          <li>
+            <h4>02. Construction</h4>
+            <p>Hand-guided stitching and reinforced stress points.</p>
+          </li>
+          <li>
+            <h4>03. Finishing</h4>
+            <p>Edge burnishing, conditioning, and quality validation.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section class="reviews reveal" id="reviews">
+        <div class="section-heading">
+          <p class="eyebrow">Customer Voice</p>
+          <h2>People notice the quality immediately</h2>
+        </div>
+        <div class="review-strip">
+          <div>
+            <strong>4.9/5</strong>
+            <span>Average Rating</span>
+          </div>
+          <div>
+            <strong>24h</strong>
+            <span>Support Response</span>
+          </div>
+          <div>
+            <strong>365 days</strong>
+            <span>Quality Warranty</span>
+          </div>
+        </div>
+        <div class="quote-grid">
+          <blockquote class="review-card reveal">
+            “The duffel feels premium from zip to strap. Worth every penny.”
+          </blockquote>
+          <blockquote class="review-card reveal">
+            “My wallet still looks better every month. Craftsmanship is obvious.”
+          </blockquote>
+          <blockquote class="review-card reveal">
+            “Exactly what I wanted: authentic leather, no gimmicks, top-notch finish.”
+          </blockquote>
+        </div>
+      </section>
+    </main>
+
+    <div class="toast" id="toast" aria-live="polite"></div>
+
+    <aside class="cart-drawer" id="cartDrawer" aria-hidden="true">
+      <div class="drawer-head">
+        <h3>Your Cart</h3>
+        <button class="ghost-btn" id="closeCart">Close</button>
+      </div>
+      <ul id="cartItems" class="cart-items"></ul>
+      <div class="cart-total-row">
+        <span>Subtotal</span>
+        <strong id="cartTotal">₹0</strong>
+      </div>
+      <button class="solid-btn checkout-btn" id="startCheckout" type="button">
+        Proceed to Checkout
+      </button>
+    </aside>
+
+    <div class="checkout-overlay" id="checkoutOverlay" aria-hidden="true">
+      <section class="checkout-modal" role="dialog" aria-modal="true" aria-labelledby="checkoutTitle">
+        <div class="checkout-head">
+          <h3 id="checkoutTitle">Checkout</h3>
+          <button class="ghost-btn" id="closeCheckout" type="button">Close</button>
+        </div>
+
+        <div class="checkout-layout">
+          <form id="checkoutForm" class="checkout-form">
+            <div class="field-grid">
+              <div class="field">
+                <label for="fullName">Full Name</label>
+                <input id="fullName" name="fullName" type="text" placeholder="Enter your name" required />
+              </div>
+              <div class="field">
+                <label for="phone">Phone Number</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  inputmode="numeric"
+                  maxlength="10"
+                  placeholder="10-digit mobile number"
+                  required
+                />
+              </div>
+              <div class="field full">
+                <label for="address">Delivery Address</label>
+                <input
+                  id="address"
+                  name="address"
+                  type="text"
+                  placeholder="House no, street, city, state, pincode"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="payment-methods" role="tablist" aria-label="Payment Methods">
+              <button class="payment-tab active" data-method="upi" type="button">UPI</button>
+              <button class="payment-tab" data-method="credit" type="button">Credit Card</button>
+              <button class="payment-tab" data-method="debit" type="button">Debit Card</button>
+            </div>
+
+            <div class="payment-panel active" data-panel="upi">
+              <p class="panel-title">Pay instantly with UPI</p>
+              <div class="field-grid">
+                <div class="field full">
+                  <label for="upiId">UPI ID</label>
+                  <input id="upiId" name="upiId" type="text" placeholder="name@bank" required />
+                </div>
+                <div class="field full">
+                  <label for="upiApp">Preferred UPI App</label>
+                  <select id="upiApp" name="upiApp" required>
+                    <option value="">Select app</option>
+                    <option value="gpay">Google Pay</option>
+                    <option value="phonepe">PhonePe</option>
+                    <option value="paytm">Paytm</option>
+                    <option value="bhim">BHIM</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-panel" data-panel="credit">
+              <p class="panel-title">Credit card details</p>
+              <div class="field-grid">
+                <div class="field full">
+                  <label for="creditHolder">Card Holder Name</label>
+                  <input
+                    id="creditHolder"
+                    name="creditHolder"
+                    type="text"
+                    placeholder="Name on card"
+                    required
+                  />
+                </div>
+                <div class="field full">
+                  <label for="creditNumber">Card Number</label>
+                  <input
+                    id="creditNumber"
+                    name="creditNumber"
+                    type="text"
+                    inputmode="numeric"
+                    maxlength="19"
+                    placeholder="1234 5678 9012 3456"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="creditExpiry">Expiry</label>
+                  <input
+                    id="creditExpiry"
+                    name="creditExpiry"
+                    type="text"
+                    maxlength="5"
+                    placeholder="MM/YY"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="creditCvv">CVV</label>
+                  <input
+                    id="creditCvv"
+                    name="creditCvv"
+                    type="password"
+                    inputmode="numeric"
+                    maxlength="3"
+                    placeholder="123"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <div class="payment-panel" data-panel="debit">
+              <p class="panel-title">Debit card details</p>
+              <div class="field-grid">
+                <div class="field full">
+                  <label for="debitBank">Bank</label>
+                  <select id="debitBank" name="debitBank" required>
+                    <option value="">Select bank</option>
+                    <option value="hdfc">HDFC Bank</option>
+                    <option value="icici">ICICI Bank</option>
+                    <option value="sbi">State Bank of India</option>
+                    <option value="axis">Axis Bank</option>
+                  </select>
+                </div>
+                <div class="field full">
+                  <label for="debitNumber">Card Number</label>
+                  <input
+                    id="debitNumber"
+                    name="debitNumber"
+                    type="text"
+                    inputmode="numeric"
+                    maxlength="19"
+                    placeholder="1234 5678 9012 3456"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="debitExpiry">Expiry</label>
+                  <input
+                    id="debitExpiry"
+                    name="debitExpiry"
+                    type="text"
+                    maxlength="5"
+                    placeholder="MM/YY"
+                    required
+                  />
+                </div>
+                <div class="field">
+                  <label for="debitCvv">CVV</label>
+                  <input
+                    id="debitCvv"
+                    name="debitCvv"
+                    type="password"
+                    inputmode="numeric"
+                    maxlength="3"
+                    placeholder="123"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+
+            <button class="solid-btn place-order-btn" id="payButton" type="submit">Pay ₹0</button>
+            <p class="checkout-message" id="checkoutMessage" aria-live="polite"></p>
+          </form>
+
+          <aside class="order-summary">
+            <h4>Order Summary</h4>
+            <ul id="checkoutItems" class="summary-list"></ul>
+            <div class="summary-row">
+              <span>Subtotal</span>
+              <strong id="checkoutSubtotal">₹0</strong>
+            </div>
+            <div class="summary-row">
+              <span>Shipping</span>
+              <strong>Free</strong>
+            </div>
+            <div class="summary-row total">
+              <span>Total</span>
+              <strong id="checkoutTotal">₹0</strong>
+            </div>
+          </aside>
+        </div>
+      </section>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
